@@ -1,0 +1,181 @@
+.mainColumns{
+    display: inline-block;
+    width:33%;
+    height: 100vh;
+    vertical-align: top;
+    margin: 0px;
+    text-align: center;
+    overflow: visible;
+}
+
+#nuggetTotalText, #nuggetsPerSecondText {
+    background-color: rgba(200, 100, 0, 0.5);
+    margin: 0px;
+    padding: 15px;
+
+}
+
+
+.shopItem, .centerContainer{
+    width:100%;
+    border: 1px solid black;
+    text-align: left;
+    height: 108px;
+    overflow: hidden;
+    background-color:white ;
+}
+
+.shopItem:hover{
+    background-color: grey;
+}
+
+.shopItemTitle{
+    margin-bottom: 0px;
+    vertical-align: top;
+    margin-top:15px;
+}
+
+.shopItemPrice {
+    margin-top: 0px;
+    vertical-align: top;
+}
+
+.shopIcon{
+    width:10%;
+    display: inline-block;
+    margin: 10px;
+}
+
+.shopDetails {
+    width: 75%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.itemQuantity {
+    display: inline-block;
+    font-size: 60px;
+    vertical-align: top;
+    margin-top: 8px;
+}
+
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color: black;
+}
+
+.nuggetBouncer{
+    animation: bounce 0.5s ease;
+}
+
+#nuggetBouncer{
+    margin-top:15vh;
+}
+
+#nuggetSpinner{
+    display: inline-block;
+    animation: spin 10s linear infinite;
+}
+
+#nugget {
+    width: 13vw;
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+#nugget:hover{
+    transform: scale(1.1);
+    filter: 
+    drop-shadow(0 0 10px rgba(255, 255, 200, 0.6))
+    drop-shadow(0 0 20px rgba(255, 230, 100, 0.5))
+    drop-shadow(0 0 40px rgba(255, 255, 100, 0.4))
+    brightness(1.2)
+    saturate(1.4);
+}
+
+#leftColumn {
+    border: 1px solid black;
+    animation: mcdGradient 3s infinite alternate;
+    background: linear-gradient(45deg, #da291c, #ffcc00);
+    background-size: 200% 200%;
+}
+
+.centerContainer {
+    border: 1px solid black;
+    animation:shiny 20s infinite linear alternate;
+    background: radial-gradient(circle, #ffdc30, #ffb84e, #ff4040 );
+    background-size: 200% 200%;
+}
+
+@keyframes mcdGradient{
+    0%{
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+@keyframes shiny{
+    0%{
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+
+@keyframes spin{
+    from{
+        transform: rotate(0deg);
+    }
+
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+      }
+      30% {
+        transform: translateY(-20px);
+      }
+      60% {
+        transform: translateY(10px);
+      }
+}
+
+.damage-text{
+    position: absolute;
+    font-size: 20px;
+    font-weight:bold;
+    color:black;
+    animation: damageNumber 1s ease-out forwards;
+    pointer-events: none;
+    user-select: none;
+}
+
+@keyframes damageNumber{
+    0%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100%{
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+}
+
+#Center {
+    margin-top: 20px;
+}
+
+#Marscot {
+    margin-top: 2px;
+    width: 9%;
+}
